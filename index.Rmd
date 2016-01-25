@@ -21,7 +21,7 @@ knit        : slidify::knit2slides
 
 ## Stock price downloaded from reliable source
 
-```{r echo=F}
+```{r echo=F, warning=F}
 library(quantmod)
 dataInput <- to.monthly(getSymbols("SPY", src = "yahoo",
       from = as.Date("01/01/10", format="%m/%d/%y"),
