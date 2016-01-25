@@ -18,18 +18,22 @@ body {background:grey transparent;
 
 ## Stock Analysis
 
-- A tiny Shiny app to allow you analyze stock data online
-- Decompose to find trend, and ...
+A tiny Shiny app to allow you analyze stock data quickly and easily!
+
+- View live stock data in candlesticks,
+- Decompose time series to find trend and seasonal components,
+- and ...
 - Forecast!
+
 
 --- .class #id 
 
-## Stock price downloaded from reliable source
+## Tons of stock data from reliable sources
 
 ```{r echo=F, warning=F}
 library(quantmod)
 dataInput <- to.monthly(getSymbols("SPY", src = "yahoo",
-      from = as.Date("01/01/10", format="%m/%d/%y"),
+      from = as.Date("01/01/11", format="%m/%d/%y"),
       to = as.Date("01/01/16", format="%m/%d/%y"),
       auto.assign = FALSE))
 chartSeries(dataInput, name = "SPY", theme = chartTheme("black"), type = "candlesticks", TA=NULL)
@@ -37,7 +41,9 @@ chartSeries(dataInput, name = "SPY", theme = chartTheme("black"), type = "candle
 
 --- .class #id
 
-## Decompose into 3 components
+## Divide and conquer
+
+Decompose into 3 components
 
 1. Trend
 2. Seasonal
@@ -51,7 +57,10 @@ help(decompose)
 --- .class #id
 
 
-## Forcast 2 years prices with prediction intervals!
+## Look into the future
+
+- 24 months forecasting
+- 80% and 95% predicton intervals
 
 ```{r warning=F, result=F}
 library(forecast)
@@ -61,7 +70,7 @@ help(forecast)
 
 --- .class #id
 
-## Check it out!
+## Check it out now!
 
 http://
 

@@ -47,21 +47,37 @@ body {background:grey transparent;
 
 <h2>Stock Analysis</h2>
 
+<p>A tiny Shiny app to allow you analyze stock data quickly and easily!</p>
+
 <ul>
-<li>A tiny Shiny app to allow you analyze stock data online</li>
-<li>Decompose to find trend, and ...</li>
+<li>View live stock data in candlesticks,</li>
+<li>Decompose time series to find trend and seasonal components,</li>
+<li>and ...</li>
 <li>Forecast!</li>
 </ul>
 
 </section>
 <section class="slide class" id="id">
-  <h2>Stock price downloaded from reliable source</h2>
-  <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+  <h2>Tons of stock data from reliable sources</h2>
+  <pre><code>##     As of 0.4-0, &#39;getSymbols&#39; uses env=parent.frame() and
+##  auto.assign=TRUE by default.
+## 
+##  This  behavior  will be  phased out in 0.5-0  when the call  will
+##  default to use auto.assign=FALSE. getOption(&quot;getSymbols.env&quot;) and 
+##  getOptions(&quot;getSymbols.auto.assign&quot;) are now checked for alternate defaults
+## 
+##  This message is shown once per session and may be disabled by setting 
+##  options(&quot;getSymbols.warning4.0&quot;=FALSE). See ?getSymbols for more details.
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
 
 </section>
 <section class="slide class" id="id">
-  <h2>Decompose into 3 components</h2>
-  <ol>
+  <h2>Divide and conquer</h2>
+  <p>Decompose into 3 components</p>
+
+<ol>
 <li>Trend</li>
 <li>Seasonal</li>
 <li>Random </li>
@@ -73,15 +89,20 @@ help(decompose)
 
 </section>
 <section class="slide class" id="id">
-  <h2>Forcast 2 years prices with prediction intervals!</h2>
-  <pre><code class="r">library(forecast)
+  <h2>Look into the future</h2>
+  <ul>
+<li>24 months forecasting</li>
+<li>80% and 95% predicton intervals</li>
+</ul>
+
+<pre><code class="r">library(forecast)
 help(ets)
 help(forecast)
 </code></pre>
 
 </section>
 <section class="slide class" id="id">
-  <h2>Check it out!</h2>
+  <h2>Check it out now!</h2>
   <p>http://</p>
 
 </section>
