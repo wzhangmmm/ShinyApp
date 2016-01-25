@@ -20,6 +20,8 @@ body {background:grey transparent;
 
 # Stock Analysis
 
+---
+
 A tiny Shiny app to allow you analyze stock data quickly and easily!
 
 - View live stock data in candlesticks,
