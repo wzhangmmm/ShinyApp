@@ -10,23 +10,23 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-# Easy Online Stock Analysis and ... forecast!
+# Easy Online Stock Analysis and ... Forecast!
 
 ---
 
-## Pick a stock from tons available
+## Step 1: Pick any stock
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png)
 
 --- 
 
-## Divide and conquer
+## Step 2: Divide and conquer
 
 Decompose time series into
 
 1. <h3>Trend</h3>
 2. <h3>Seasonal</h3>
-3. Residual 
+3. <h3>Residual</h3>
 
 
 ```r
@@ -37,10 +37,10 @@ help(decompose)
 --- 
 
 
-## Look into the future!
+## Step 3: Look into the future
 
-- <h3>24 months forecast</h3>
-- <h3>Predicton intervals</h3>
+- <h3>24 months Forecast</h3>
+- <h3>Predicton Intervals</h3>
 
 
 ```r
@@ -49,9 +49,7 @@ help(ets)
 help(forecast)
 ```
 
---- 
+--- .shout #demo
 
-## Check it out now!
-
-<h2>http://</h2>
+## [Check it out now!](http://112.74.207.21:8888/) 
 
