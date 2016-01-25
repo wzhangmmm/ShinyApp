@@ -16,7 +16,9 @@ body {background:grey transparent;
 }
 </style>
 
-## Stock Analysis
+---
+
+# Stock Analysis
 
 A tiny Shiny app to allow you analyze stock data quickly and easily!
 
@@ -30,10 +32,10 @@ A tiny Shiny app to allow you analyze stock data quickly and easily!
 
 ## Tons of stock data from reliable sources
 
-```{r echo=F, warning=F}
+```{r echo=F, warning=F, message=F}
 library(quantmod)
 dataInput <- to.monthly(getSymbols("SPY", src = "yahoo",
-      from = as.Date("01/01/11", format="%m/%d/%y"),
+      from = as.Date("01/01/10", format="%m/%d/%y"),
       to = as.Date("01/01/16", format="%m/%d/%y"),
       auto.assign = FALSE))
 chartSeries(dataInput, name = "SPY", theme = chartTheme("black"), type = "candlesticks", TA=NULL)

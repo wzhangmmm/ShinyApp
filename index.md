@@ -16,7 +16,9 @@ body {background:grey transparent;
 }
 </style>
 
-## Stock Analysis
+---
+
+# Stock Analysis
 
 A tiny Shiny app to allow you analyze stock data quickly and easily!
 
@@ -29,19 +31,6 @@ A tiny Shiny app to allow you analyze stock data quickly and easily!
 --- .class #id 
 
 ## Tons of stock data from reliable sources
-
-
-```
-##     As of 0.4-0, 'getSymbols' uses env=parent.frame() and
-##  auto.assign=TRUE by default.
-## 
-##  This  behavior  will be  phased out in 0.5-0  when the call  will
-##  default to use auto.assign=FALSE. getOption("getSymbols.env") and 
-##  getOptions("getSymbols.auto.assign") are now checked for alternate defaults
-## 
-##  This message is shown once per session and may be disabled by setting 
-##  options("getSymbols.warning4.0"=FALSE). See ?getSymbols for more details.
-```
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png)
 
