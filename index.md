@@ -11,18 +11,11 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-<style type="text/css">
-body {background:grey transparent;
-}
-</style>
-
----
-
 # Stock Analysis
 
 ---
 
-A tiny Shiny app to allow you analyze stock data quickly and easily!
+## A tiny Shiny app to allow you analyze stock data quickly and easily!
 
 - View live stock data in candlesticks,
 - Decompose time series to find trend and seasonal components,

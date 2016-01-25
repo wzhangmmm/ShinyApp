@@ -11,18 +11,11 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-<style type="text/css">
-body {background:grey transparent;
-}
-</style>
-
----
-
 # Stock Analysis
 
 ---
 
-A tiny Shiny app to allow you analyze stock data quickly and easily!
+## A tiny Shiny app to allow you analyze stock data quickly and easily!
 
 - View live stock data in candlesticks,
 - Decompose time series to find trend and seasonal components,
@@ -34,7 +27,7 @@ A tiny Shiny app to allow you analyze stock data quickly and easily!
 
 ## Tons of stock data from reliable sources
 
-```{r echo=F, warning=F, message=F}
+```{r echo=F, warning=F, message=F, fig.width=6}
 library(quantmod)
 dataInput <- to.monthly(getSymbols("SPY", src = "yahoo",
       from = as.Date("01/01/10", format="%m/%d/%y"),
