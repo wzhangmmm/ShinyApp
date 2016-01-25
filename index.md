@@ -10,7 +10,7 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-# Easy Online Stock Analysis and ... Forecast!
+# [Easy Online Stock Analysis and ... Forecast!]
 
 ---
 
@@ -51,5 +51,5 @@ help(forecast)
 
 ---
 
-# Check it out now! [https://wzhang.shinyapps.io/shinyapp/](https://wzhang.shinyapps.io/shinyapp/)
+# Check it out now! [<h3>https://wzhang.shinyapps.io/shinyapp/</h3>](https://wzhang.shinyapps.io/shinyapp/)
 
