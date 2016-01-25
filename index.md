@@ -49,7 +49,10 @@ help(ets)
 help(forecast)
 ```
 
---- .shout #demo
+---
 
-## [Check it out now!](http://112.74.207.21:8888/) 
+## Check it out now!
+<br>
+<br>
+<h3>[http://112.74.207.21:8888/](http://112.74.207.21:8888/)</h3>
 
