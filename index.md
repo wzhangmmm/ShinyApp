@@ -39,8 +39,8 @@ help(decompose)
 
 ## Step 3: Look into the future
 
-- <h3>24 months Forecast</h3>
-- <h3>Predicton Intervals</h3>
+- <h3>24 months forecast</h3>
+- <h3>Predicton intervals</h3>
 
 
 ```r
@@ -54,5 +54,5 @@ help(forecast)
 ## Check it out now!
 <br>
 <br>
-<h3>[http://112.74.207.21:8888/](http://112.74.207.21:8888/)</h3>
+[http://112.74.207.21:8888/](http://112.74.207.21:8888/)
 
