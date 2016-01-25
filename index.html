@@ -1,93 +1,380 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html>
 <head>
-	<title>Shiny App Pitch</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=1274, user-scalable=no">
-	<meta name="description" content="Shiny App Pitch">
-	<meta name="author" content="wzhang">
-	<meta name="generator" content="slidify" />
-	<!-- LOAD STYLE SHEETS -->
-	<link rel="stylesheet" href="libraries/frameworks/shower/themes/ribbon/styles/screen.css">
-	<link rel="stylesheet" media="print"
-	  href="libraries/frameworks/shower/themes/ribbon/styles/print.css">
-	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css">  <link rel="stylesheet" href = "libraries/widgets/bootstrap/css/bootstrap.css">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta content="chrome=1" http-equiv="X-UA-Compatible">
+  <title>Shiny App Pitch</title>
+  <meta content="Shiny App Pitch" name="description">
+  <meta content="wzhang" name="author">
+  <meta content="slidify" name="generator">
+  <!-- STYLESHEETS -->
+  <link href="libraries/frameworks/landslide/themes/default/css/print.css" 
+    media="print" rel="stylesheet">
+  <link href="libraries/frameworks/landslide/themes/default/css/screen.css" 
+    media="screen, projection" rel="stylesheet">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />  <link rel="stylesheet" href = "libraries/widgets/bootstrap/css/bootstrap.css">
 
-	<!--
-		To apply styles to the certain slides
-		use slide ID to get needed elements
-		-->
-	<style>
-		#Cover h2 {
-      margin:65px 0 0;
-			color:#FFF;
-			text-align:center;
-			font-size:70px;
-			}
-		#FitToWidth h2,
-		#FitToHeight h2 {
-			color:#FFF;
-			text-align:center;
-			}
-	</style> 
 </head>
-<body class="list">
-  <header class="caption">
-  	<h1>Shiny App Pitch</h1>
-	</header>
-  <section class="slide " id="slide-1">
-  <div>
-    <h2>Stock Analysis</h2>
-    <ol>
+
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      <!-- <div class="slide-wrapper"> -->
+ <div class="slide " id="slide-1" style="background:">
+ 
+  <div class="inner">
+    <header>
+      <h2>Stock Analysis</h2>
+    </header>
+    
+    <section>
+      <ol>
 <li>A tiny Shiny app to allow you analyze stock data online!</li>
 <li>Decompose to find trend!</li>
 <li>Forecast!</li>
 </ol>
 
-  </div>
-</section>
-<section class="slide class" id="id">
-  <div>
-    <h2>Stock price downloaded from reliable source</h2>
-    <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
-
-  </div>
-</section>
-<section class="slide " id="slide-3">
-  <div>
-    <h2>Decomposition</h2>
+    </section>
     
-  </div>
-</section>
-<section class="slide " id="slide-4">
-  <div>
-    <h2>Forcast!</h2>
-    
-  </div>
-</section>
-<section class="slide " id="slide-5">
-  <div>
-    <h2>Check it out!</h2>
-    <p>http://</p>
+  </div><!-- inner -->
+  
+  
+ 
+  <div class="presenter_notes">
+    <section>
+      
+    </section>
+  </div><!-- presenter notes -->
+  
+  <div class="modal hide" id="source-1" style='display:none'>
+    <div class="modal-body">
+      <pre><code>
+        --- 
 
+## Stock Analysis
+
+1. A tiny Shiny app to allow you analyze stock data online!
+2. Decompose to find trend!
+3. Forecast!
+      </code></pre>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" data-dismiss="modal" href="#">Close</a> 
+      <a class="btn btn-primary" href="#">Save changes</a>
+    </div>
+  </div><!-- source -->
+  
+  <footer>
+    <aside class="source">
+      <a class="btn" data-toggle="modal" href="#source-">
+        View Source
+      </a>
+    </aside>
+    <aside class="page_number">
+      1 / 
+    </aside>
+  </footer><!-- footer -->
+  
+ </div>
+<!-- </div> -->
+<!-- <div class="slide-wrapper"> -->
+ <div class="slide class" id="id" style="background:">
+ 
+  <div class="inner">
+    <header>
+      <h2>Stock price downloaded from reliable source</h2>
+    </header>
+    
+    <section>
+      <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+    </section>
+    
+  </div><!-- inner -->
+  
+  
+ 
+  <div class="presenter_notes">
+    <section>
+      
+    </section>
+  </div><!-- presenter notes -->
+  
+  <div class="modal hide" id="source-2" style='display:none'>
+    <div class="modal-body">
+      <pre><code>
+        ---  .class #id 
+
+## Stock price downloaded from reliable source
+
+```{r echo=F, warning=F}
+library(quantmod)
+dataInput &lt;- to.monthly(getSymbols(&quot;SPY&quot;, src = &quot;yahoo&quot;,
+      from = as.Date(&quot;01/01/10&quot;, format=&quot;%m/%d/%y&quot;),
+      to = as.Date(&quot;01/01/16&quot;, format=&quot;%m/%d/%y&quot;),
+      auto.assign = FALSE))
+chartSeries(dataInput, name = &quot;SPY&quot;, theme = chartTheme(&quot;black&quot;), type = &quot;candlesticks&quot;)
+```
+      </code></pre>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" data-dismiss="modal" href="#">Close</a> 
+      <a class="btn btn-primary" href="#">Save changes</a>
+    </div>
+  </div><!-- source -->
+  
+  <footer>
+    <aside class="source">
+      <a class="btn" data-toggle="modal" href="#source-">
+        View Source
+      </a>
+    </aside>
+    <aside class="page_number">
+      2 / 
+    </aside>
+  </footer><!-- footer -->
+  
+ </div>
+<!-- </div> -->
+<!-- <div class="slide-wrapper"> -->
+ <div class="slide " id="slide-3" style="background:">
+ 
+  <div class="inner">
+    <header>
+      <h2>Decomposition</h2>
+    </header>
+    
+    
+  </div><!-- inner -->
+  
+  
+ 
+  <div class="presenter_notes">
+    <section>
+      
+    </section>
+  </div><!-- presenter notes -->
+  
+  <div class="modal hide" id="source-3" style='display:none'>
+    <div class="modal-body">
+      <pre><code>
+        --- 
+
+## Decomposition
+      </code></pre>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" data-dismiss="modal" href="#">Close</a> 
+      <a class="btn btn-primary" href="#">Save changes</a>
+    </div>
+  </div><!-- source -->
+  
+  <footer>
+    <aside class="source">
+      <a class="btn" data-toggle="modal" href="#source-">
+        View Source
+      </a>
+    </aside>
+    <aside class="page_number">
+      3 / 
+    </aside>
+  </footer><!-- footer -->
+  
+ </div>
+<!-- </div> -->
+<!-- <div class="slide-wrapper"> -->
+ <div class="slide " id="slide-4" style="background:">
+ 
+  <div class="inner">
+    <header>
+      <h2>Forcast!</h2>
+    </header>
+    
+    
+  </div><!-- inner -->
+  
+  
+ 
+  <div class="presenter_notes">
+    <section>
+      
+    </section>
+  </div><!-- presenter notes -->
+  
+  <div class="modal hide" id="source-4" style='display:none'>
+    <div class="modal-body">
+      <pre><code>
+        --- 
+
+
+## Forcast!
+
+      </code></pre>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" data-dismiss="modal" href="#">Close</a> 
+      <a class="btn btn-primary" href="#">Save changes</a>
+    </div>
+  </div><!-- source -->
+  
+  <footer>
+    <aside class="source">
+      <a class="btn" data-toggle="modal" href="#source-">
+        View Source
+      </a>
+    </aside>
+    <aside class="page_number">
+      4 / 
+    </aside>
+  </footer><!-- footer -->
+  
+ </div>
+<!-- </div> -->
+<!-- <div class="slide-wrapper"> -->
+ <div class="slide " id="slide-5" style="background:">
+ 
+  <div class="inner">
+    <header>
+      <h2>Check it out!</h2>
+    </header>
+    
+    <section>
+      <p>http://</p>
+
+    </section>
+    
+  </div><!-- inner -->
+  
+  
+ 
+  <div class="presenter_notes">
+    <section>
+      
+    </section>
+  </div><!-- presenter notes -->
+  
+  <div class="modal hide" id="source-5" style='display:none'>
+    <div class="modal-body">
+      <pre><code>
+        --- 
+
+
+## Check it out!
+
+http://
+
+      </code></pre>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" data-dismiss="modal" href="#">Close</a> 
+      <a class="btn btn-primary" href="#">Save changes</a>
+    </div>
+  </div><!-- source -->
+  
+  <footer>
+    <aside class="source">
+      <a class="btn" data-toggle="modal" href="#source-">
+        View Source
+      </a>
+    </aside>
+    <aside class="page_number">
+      5 / 
+    </aside>
+  </footer><!-- footer -->
+  
+ </div>
+<!-- </div> -->
+    </div>
   </div>
-</section>
-  <div class="progress">
-    <div></div>
-  </div>
-	<script src="libraries/frameworks/shower/shower.js"></script>
-	<script>  
-	$(function (){ 
-	  $("#example").popover(); 
-	  $("[rel='tooltip']").tooltip(); 
-	});  
-	</script>  
-	<!-- LOAD HIGHLIGHTER JS FILES -->
-	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
-	 
-		<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
-	<!-- Photos by John Carey — fiftyfootshadows.net -->
+  <div id="toc" class="sidebar">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+        <tr id="toc-row-1" class="">
+        <th><a href="#slide1">Stock Analysis</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      <tr id="toc-row-2" class="">
+        <th><a href="#slide2">Stock price downloaded from reliable source</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      <tr id="toc-row-3" class="">
+        <th><a href="#slide3">Decomposition</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      <tr id="toc-row-4" class="">
+        <th><a href="#slide4">Forcast!</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      <tr id="toc-row-5" class="">
+        <th><a href="#slide5">Check it out!</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+   </table>
+  </div>  <div id="help" class="sidebar hidden">
+  <h2>Help</h2>
+  <table>
+    <caption>Help</caption>
+    <tr>
+      <th>Table of Contents</th>
+      <td>t</td>
+    </tr>
+    <tr>
+      <th>Exposé</th>
+      <td>ESC</td>
+    </tr>
+    <tr>
+      <th>Full screen slides</th>
+      <td>e</td>
+    </tr>
+    <tr>
+      <th>Presenter View</th>
+      <td>p</td>
+    </tr>
+    <tr>
+      <th>Source Files</th>
+      <td>s</td>
+    </tr>
+    <tr>
+      <th>Slide Numbers</th>
+      <td>n</td>
+    </tr>
+    <tr>
+      <th>Toggle screen blanking</th>
+      <td>b</td>
+    </tr>
+    <tr>
+      <th>Show/hide slide context</th>
+      <td>c</td>
+    </tr>
+    <tr>
+      <th>Notes</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Help</th>
+      <td>h</td>
+    </tr>
+  </table>
+</div>
 </body>
-</html>
+  <script 
+    src="libraries/frameworks/landslide/themes/default/js/slides.js" type="text/javascript">
+  </script>
+  <script>main()</script>
+  <script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
