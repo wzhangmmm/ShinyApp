@@ -51,9 +51,5 @@ help(forecast)
 
 ---
 
-## Check it out now!
-<br>
-<br>
-<br>
-[<h3>http://112.74.207.21:8888/</h3>](http://112.74.207.21:8888/)
+# Check it out now! [https://wzhang.shinyapps.io/shinyapp/](https://wzhang.shinyapps.io/shinyapp/)
 
