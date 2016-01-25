@@ -18,8 +18,8 @@ body {background:grey transparent;
 
 ## Stock Analysis
 
-- A tiny Shiny app to allow you analyze stock data online!
-- Decompose to find trend!
+- A tiny Shiny app to allow you analyze stock data online
+- Decompose to find trend, and ...
 - Forecast!
 
 --- .class #id 
