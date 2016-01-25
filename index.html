@@ -49,51 +49,7 @@
 <section class="slide class" id="id">
   <div>
     <h2>Stock price downloaded from reliable source</h2>
-    <pre><code class="r">library(quantmod)
-</code></pre>
-
-<pre><code>## Loading required package: xts
-</code></pre>
-
-<pre><code>## Loading required package: zoo
-</code></pre>
-
-<pre><code>## 
-## Attaching package: &#39;zoo&#39;
-</code></pre>
-
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     as.Date, as.Date.numeric
-</code></pre>
-
-<pre><code>## Loading required package: TTR
-</code></pre>
-
-<pre><code>## Version 0.4-0 included new data defaults. See ?getSymbols.
-</code></pre>
-
-<pre><code class="r">dataInput &lt;- to.monthly(getSymbols(&quot;SPY&quot;, src = &quot;yahoo&quot;,
-      from = as.Date(&quot;01/01/10&quot;, format=&quot;%m/%d/%y&quot;),
-      to = as.Date(&quot;01/01/16&quot;, format=&quot;%m/%d/%y&quot;),
-      auto.assign = FALSE))
-</code></pre>
-
-<pre><code>##     As of 0.4-0, &#39;getSymbols&#39; uses env=parent.frame() and
-##  auto.assign=TRUE by default.
-## 
-##  This  behavior  will be  phased out in 0.5-0  when the call  will
-##  default to use auto.assign=FALSE. getOption(&quot;getSymbols.env&quot;) and 
-##  getOptions(&quot;getSymbols.auto.assign&quot;) are now checked for alternate defaults
-## 
-##  This message is shown once per session and may be disabled by setting 
-##  options(&quot;getSymbols.warning4.0&quot;=FALSE). See ?getSymbols for more details.
-</code></pre>
-
-<pre><code class="r">chartSeries(dataInput, name = &quot;SPY&quot;, theme = chartTheme(&quot;black&quot;), type = &quot;candlesticks&quot;)
-</code></pre>
-
-<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+    <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
 
   </div>
 </section>
