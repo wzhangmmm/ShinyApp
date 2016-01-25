@@ -2,7 +2,6 @@
 title       : Shiny App Pitch 
 subtitle    : Stock Analysis
 author      : wzhang
-job         : 
 framework   : deckjs        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -13,15 +12,11 @@ knit        : slidify::knit2slides
 
 # Stock Analysis
 
----
-
-## A tiny Shiny app to allow you analyze stock data quickly and easily!
-
+- A tiny Shiny app to allow you analyze stock data quickly and easily!
 - View live stock data in candlesticks,
 - Decompose time series to find trend and seasonal components,
 - and ...
 - Forecast!
-
 
 --- .class #id 
 
