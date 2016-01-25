@@ -10,29 +10,23 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-# Stock Analysis
+# Easy Online Stock Analysis and ... forecast!
 
-- A tiny Shiny app to allow you analyze stock data quickly and easily!
-- View live stock data in candlesticks,
-- Decompose time series to find trend and seasonal components,
-- and ...
-- Forecast!
+---
 
---- .class #id 
-
-## Tons of stock data from reliable sources
+## Pick a stock from tons available
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png)
 
---- .class #id
+--- 
 
 ## Divide and conquer
 
-Decompose into 3 components
+Decompose time series into
 
-1. Trend
-2. Seasonal
-3. Random 
+1. <h3>Trend</h3>
+2. <h3>Seasonal</h3>
+3. Residual 
 
 
 ```r
@@ -40,13 +34,13 @@ library(quantmod)
 help(decompose)
 ```
 
---- .class #id
+--- 
 
 
-## Look into the future
+## Look into the future!
 
-- 24 months forecasting
-- 80% and 95% predicton intervals
+- <h3>24 months forecast</h3>
+- <h3>Predicton intervals</h3>
 
 
 ```r
@@ -55,9 +49,9 @@ help(ets)
 help(forecast)
 ```
 
---- .class #id
+--- 
 
 ## Check it out now!
 
-http://
+<h2>http://</h2>
 
