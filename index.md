@@ -18,44 +18,23 @@ body {background:grey transparent;
 
 ## Stock Analysis
 
-- A tiny Shiny app to allow you analyze stock data online!
-- Decompose to find trend!
+- A tiny Shiny app to allow you analyze stock data online
+- Decompose to find trend, and ...
 - Forecast!
 
 --- .class #id 
 
 ## Stock price downloaded from reliable source
 
-
-```r
-library(quantmod)
-dataInput <- to.monthly(getSymbols("SPY", src = "yahoo",
-      from = as.Date("01/01/10", format="%m/%d/%y"),
-      to = as.Date("01/01/16", format="%m/%d/%y"),
-      auto.assign = FALSE))
-```
-
-```
-##     As of 0.4-0, 'getSymbols' uses env=parent.frame() and
-##  auto.assign=TRUE by default.
-## 
-##  This  behavior  will be  phased out in 0.5-0  when the call  will
-##  default to use auto.assign=FALSE. getOption("getSymbols.env") and 
-##  getOptions("getSymbols.auto.assign") are now checked for alternate defaults
-## 
-##  This message is shown once per session and may be disabled by setting 
-##  options("getSymbols.warning4.0"=FALSE). See ?getSymbols for more details.
-```
-
-```r
-chartSeries(dataInput, name = "SPY", theme = chartTheme("black"), type = "candlesticks", TA=NULL)
-```
-
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png)
 
 --- .class #id
 
-## Decomposition
+## Decompose into 3 components
+
+1. Trend
+2. Seasonal
+3. Random 
 
 
 ```r
@@ -66,22 +45,11 @@ help(decompose)
 --- .class #id
 
 
-## Forcast!
+## Forcast 2 years prices with prediction intervals!
 
 
 ```r
 library(forecast)
-```
-
-```
-## Loading required package: timeDate
-```
-
-```
-## This is forecast 6.2
-```
-
-```r
 help(ets)
 help(forecast)
 ```

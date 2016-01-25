@@ -26,7 +26,7 @@ body {background:grey transparent;
 
 ## Stock price downloaded from reliable source
 
-```{r echo=T, warning=F, fig.width=8, fig.height=6}
+```{r echo=F, warning=F}
 library(quantmod)
 dataInput <- to.monthly(getSymbols("SPY", src = "yahoo",
       from = as.Date("01/01/10", format="%m/%d/%y"),
@@ -37,9 +37,13 @@ chartSeries(dataInput, name = "SPY", theme = chartTheme("black"), type = "candle
 
 --- .class #id
 
-## Decomposition
+## Decompose into 3 components
 
-```{r result=F}
+1. Trend
+2. Seasonal
+3. Random 
+
+```{r warning=F, result=F}
 library(quantmod)
 help(decompose)
 ```
@@ -47,9 +51,9 @@ help(decompose)
 --- .class #id
 
 
-## Forcast!
+## Forcast 2 years prices with prediction intervals!
 
-```{r result=F}
+```{r warning=F, result=F}
 library(forecast)
 help(ets)
 help(forecast)

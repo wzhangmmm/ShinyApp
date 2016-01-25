@@ -51,8 +51,8 @@ body {background:grey transparent;
 <h2>Stock Analysis</h2>
 
 <ul>
-<li>A tiny Shiny app to allow you analyze stock data online!</li>
-<li>Decompose to find trend!</li>
+<li>A tiny Shiny app to allow you analyze stock data online</li>
+<li>Decompose to find trend, and ...</li>
 <li>Forecast!</li>
 </ul>
 
@@ -65,28 +65,7 @@ body {background:grey transparent;
     <h2>Stock price downloaded from reliable source</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">library(quantmod)
-dataInput &lt;- to.monthly(getSymbols(&quot;SPY&quot;, src = &quot;yahoo&quot;,
-      from = as.Date(&quot;01/01/10&quot;, format=&quot;%m/%d/%y&quot;),
-      to = as.Date(&quot;01/01/16&quot;, format=&quot;%m/%d/%y&quot;),
-      auto.assign = FALSE))
-</code></pre>
-
-<pre><code>##     As of 0.4-0, &#39;getSymbols&#39; uses env=parent.frame() and
-##  auto.assign=TRUE by default.
-## 
-##  This  behavior  will be  phased out in 0.5-0  when the call  will
-##  default to use auto.assign=FALSE. getOption(&quot;getSymbols.env&quot;) and 
-##  getOptions(&quot;getSymbols.auto.assign&quot;) are now checked for alternate defaults
-## 
-##  This message is shown once per session and may be disabled by setting 
-##  options(&quot;getSymbols.warning4.0&quot;=FALSE). See ?getSymbols for more details.
-</code></pre>
-
-<pre><code class="r">chartSeries(dataInput, name = &quot;SPY&quot;, theme = chartTheme(&quot;black&quot;), type = &quot;candlesticks&quot;, TA=NULL)
-</code></pre>
-
-<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+    <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -94,10 +73,16 @@ dataInput &lt;- to.monthly(getSymbols(&quot;SPY&quot;, src = &quot;yahoo&quot;,
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Decomposition</h2>
+    <h2>Decompose into 3 components</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">library(quantmod)
+    <ol>
+<li>Trend</li>
+<li>Seasonal</li>
+<li>Random </li>
+</ol>
+
+<pre><code class="r">library(quantmod)
 help(decompose)
 </code></pre>
 
@@ -107,19 +92,11 @@ help(decompose)
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Forcast!</h2>
+    <h2>Forcast 2 years prices with prediction intervals!</h2>
   </hgroup>
   <article data-timings="">
     <pre><code class="r">library(forecast)
-</code></pre>
-
-<pre><code>## Loading required package: timeDate
-</code></pre>
-
-<pre><code>## This is forecast 6.2
-</code></pre>
-
-<pre><code class="r">help(ets)
+help(ets)
 help(forecast)
 </code></pre>
 
@@ -156,13 +133,13 @@ help(forecast)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Decomposition'>
+        data-slide=3 title='Decompose into 3 components'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Forcast!'>
+        data-slide=4 title='Forcast 2 years prices with prediction intervals!'>
          4
       </a>
     </li>
