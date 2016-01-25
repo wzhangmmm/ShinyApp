@@ -3,7 +3,7 @@ title       : Shiny App Pitch
 subtitle    : Stock Analysis
 author      : wzhang
 job         : 
-framework   : landslide     # {io2012, html5slides, shower, dzslides, ...}
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [bootstrap]   # {mathjax, quiz, bootstrap}
@@ -11,37 +11,51 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
+<style type="text/css">
+body {background:grey transparent;
+}
+</style>
+
 ## Stock Analysis
 
-1. A tiny Shiny app to allow you analyze stock data online!
-2. Decompose to find trend!
-3. Forecast!
+- A tiny Shiny app to allow you analyze stock data online!
+- Decompose to find trend!
+- Forecast!
 
 --- .class #id 
 
 ## Stock price downloaded from reliable source
 
-```{r echo=F, warning=F}
+```{r echo=T, warning=F, fig.width=8, fig.height=6}
 library(quantmod)
 dataInput <- to.monthly(getSymbols("SPY", src = "yahoo",
       from = as.Date("01/01/10", format="%m/%d/%y"),
       to = as.Date("01/01/16", format="%m/%d/%y"),
       auto.assign = FALSE))
-chartSeries(dataInput, name = "SPY", theme = chartTheme("black"), type = "candlesticks")
+chartSeries(dataInput, name = "SPY", theme = chartTheme("black"), type = "candlesticks", TA=NULL)
 ```
 
----
+--- .class #id
 
 ## Decomposition
 
----
+```{r result=F}
+library(quantmod)
+help(decompose)
+```
+
+--- .class #id
 
 
 ## Forcast!
 
+```{r result=F}
+library(forecast)
+help(ets)
+help(forecast)
+```
 
----
-
+--- .class #id
 
 ## Check it out!
 
