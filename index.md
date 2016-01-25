@@ -51,5 +51,5 @@ help(forecast)
 
 ---
 
-# Check it out now! [<h3>Demo</h3>](https://wzhang.shinyapps.io/shinyapp/)
+# [Check it out now! Demo](https://wzhang.shinyapps.io/shinyapp/)
 
